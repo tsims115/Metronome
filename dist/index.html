@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>One Page Wonder - Start Bootstrap Template</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <title>Homepage - Metronome</title>
+        <link rel="icon" type="image/x-icon" href="assets/metronome.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
@@ -45,47 +46,20 @@
         </header>
         <!-- Content section 1-->
         <section id="scroll">
+            <div id="metronome" class="metronome 6">
+                
+            </div>
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/01.jpg" alt="..." /></div>
+                        <div class="p-5"><div class="rounded-circle bg-dark text-center" style="height: 200px; width: 200px; color: white; vertical-align: .5rem;">
+                            <div class="" style="padding: 80px;"></div>
+                        </div></div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <h2 class="display-4">For those about to rock...</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Content section 2-->
-        <section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/02.jpg" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="p-5">
-                            <h2 class="display-4">We salute you!</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Content section 3-->
-        <section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/03.jpg" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">Let there be rock!</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                            <h2 class="display-4">BPM</h2>
+                            <input type="range" id="bpm" name="bpm" min="40" max="220" onchange="display_bpm()">
                         </div>
                     </div>
                 </div>
