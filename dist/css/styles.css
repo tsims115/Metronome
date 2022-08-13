@@ -11382,3 +11382,12 @@ header.masthead .bg-circle-4 {
     font-size: 4rem;
   }
 }
+
+.button-start {
+  background-color: #189ff2;
+}
+
+.button-start:hover,  .button-start:focus{
+  background-color: #18c3f2;
+  cursor: pointer;
+}
