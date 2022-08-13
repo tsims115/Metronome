@@ -7,6 +7,12 @@
 // Use this file to add JavaScript to your project
 
 function display_bpm() {
-    console.log($('input').val());
+    let bpm = $('input').val();
+    $('.bpmd').html(bpm);
+    $('input').on('input', function() {
+        let bpm = $('input').val();
+        $('.bpmd').html(bpm);
+      });
+    
 }
-
+display_bpm();
