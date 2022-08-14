@@ -11391,3 +11391,9 @@ header.masthead .bg-circle-4 {
   background-color: #18c3f2;
   cursor: pointer;
 }
+
+.bpm_slider input{
+  width: 70%;
+  max-width: 350px;
+  min-width: 100px;
+}
