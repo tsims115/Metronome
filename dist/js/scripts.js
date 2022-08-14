@@ -101,6 +101,13 @@ let M = new Metronome($('input').val());
 function start_or_stop() {
     M.tempo = $('input').val();
     M.startStop();
+    button = document.getElementsByClassName('button-start')[0];
+    button.classList.toggle('button-stop');
+    if (M.isRunning) {
+        button.style.backgroundColor = '#66ff33';
+    } else {
+        button.style.backgroundColor = '#189ff2';
+    }
 }
 
 function display_bpm() {
