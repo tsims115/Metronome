@@ -11404,6 +11404,7 @@ header.masthead .bg-circle-4 {
   content: url('../assets/img/plus.png');
   width: 25px;
 }
+
 .minus-button {
   content: url('../assets/img/minus.png');
   width: 25px;
@@ -11412,3 +11413,4 @@ header.masthead .bg-circle-4 {
 .bpm_slider span {
   text-shadow: 2px 2px 4px #000000;
 }
+
