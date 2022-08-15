@@ -11323,7 +11323,7 @@ header.masthead {
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
   /* background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%); */
-  background-image: url("../assets/img/background.jpg");
+  background-image: url("../assets/img/background1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -11397,4 +11397,18 @@ header.masthead .bg-circle-4 {
   width: 70%;
   max-width: 350px;
   min-width: 100px;
+}
+
+
+.plus-button {
+  content: url('../assets/img/plus.png');
+  width: 25px;
+}
+.minus-button {
+  content: url('../assets/img/minus.png');
+  width: 25px;
+}
+
+.bpm_slider span {
+  text-shadow: 2px 2px 4px #000000;
 }

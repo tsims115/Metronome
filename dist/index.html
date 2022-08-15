@@ -15,12 +15,13 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles.scss" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top">Metronome</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
@@ -48,7 +49,7 @@
                 
             </div>
             <div class="container px-5 text-center">
-                <div class="row gx-5 align-items-center">
+                <div class="row gx-5 align-items-center p-4">
                     <div class="col-lg-6 order-lg-2 mt-5 mb-5" >
                         <div class="button-start p-5 rounded-circle" onclick="start_or_stop()" style="margin-left: auto;margin-right: auto; height: 175px; width:175px; color: white;">
                             <h2 class="display-4 bpmd"></h2>
@@ -56,10 +57,12 @@
                         </div>
                     </div>
                     <div class="bpm_slider col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">BPM</h2>
-                            <input type="range" step="1" id="bpm" name="bpm" min="40" max="220" value="60">
+                        <div class="p-1 d-flex justify-content-center justify-content-center">
+                            <div class="minus-button" style="margin-right: 10px;">-</div>
+                            <input class="range-slider grad" type="range" step="1" id="bpm" name="bpm" min="40" max="220" value="60">
+                            <div class="plus-button" style="margin-left: 10px;">+</div>
                         </div>
+                        <span class="display-4" style="font-size: 2rem;">BPM</span>
                     </div>
                 </div>
             </div>
