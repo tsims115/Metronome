@@ -122,6 +122,7 @@ function display_bpm() {
       $('input').on('change', function() {
         bpm = $('input').val();
         M.tempo = bpm;
+        document.cookie = `bpm=${M.tempo}`;
       });
     $('.plus-button').on('click', function() {
         $('input').val(parseInt(bpm) + 1);
@@ -138,6 +139,19 @@ function display_bpm() {
     
 }
 
+function check_and_set_cookies(name) {
+    let cookieArr = document.cookie.split(";");
+    let cookiePair;
+    for(let i = 0; i < cookieArr.length; i++) {
+        cookiePair = cookieArr[i].split("=");
+        cookiePair[0] = cookiePair[0].split(' ').join("");
+        console.log(cookiePair[0]);
+        if(name == cookiePair[0]) {
+            $('input').val(parseInt(cookiePair[1]));
+        }
+    }
+}
+
 function frequency() {
     $('.lead-note').on('change', () => {
         M.leadNote = 200 + (450 * ($('.lead-note').val() - 1));
@@ -147,6 +161,6 @@ function frequency() {
     });
 }
 
+check_and_set_cookies('bpm');
 frequency();
-
 display_bpm();
