@@ -58,10 +58,34 @@
                         </div>
                     </div>
                     <div class="bpm_slider col-lg-6 order-lg-1">
+                        <div class="frequency-container d-flex justify-content-center" style="margin-right: auto; margin-left: auto;">
+                            <div class="d-flex flex-column justify-content-center" style="margin-right: 10px;">
+                                <label for="lead-note">lead-note</label>
+                                <select id="lead-note" class="lead-note" style="margin-right: auto; margin-left: auto; width: 34px;">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                                <label for="base-note">base-note</label>
+                                <select id="base-note" class="base-note" style="margin-right: auto; margin-left: auto; width: 34px;">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="p-1 d-flex justify-content-center justify-content-center">
-                            <div class="minus-button" style="margin-right: 10px;">-</div>
+                            <div class="minus-button" style="margin-right: 10px; user-select: none;"></div>
                             <input class="range-slider grad" type="range" step="1" id="bpm" name="bpm" min="40" max="220" value="60">
-                            <div class="plus-button" style="margin-left: 10px;">+</div>
+                            <div class="plus-button" style="margin-left: 10px; user-select: none;"></div>
                         </div>
                         <span class="display-4" style="font-size: 2rem;">BPM</span>
                     </div>

@@ -11409,6 +11409,17 @@ header.masthead .bg-circle-4 {
   content: url('../assets/img/minus.png');
   width: 25px;
 }
+.minus-button:hover, .plus-button:hover {
+  background-color: rgb(228, 228, 228);
+  border-radius: 3px; 
+  color: rgba(83, 211, 104, 0.911);
+  opacity: 7;
+  transition: all 0.4s;
+}
+
+.minus-button:active, .plus-button:active {
+  background-color: forestgreen;
+}
 
 .bpm_slider span {
   text-shadow: 2px 2px 4px #000000;

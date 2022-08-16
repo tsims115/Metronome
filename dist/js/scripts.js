@@ -18,6 +18,8 @@ class Metronome
         this.nextNoteTime = 0.0;     // when the next note is due
         this.isRunning = false;
         this.intervalID = null;
+        this.leadNote = 200;
+        this.baseNote = 200;
     }
 
     nextNote()
@@ -41,7 +43,7 @@ class Metronome
         const osc = this.audioContext.createOscillator();
         const envelope = this.audioContext.createGain();
         
-        osc.frequency.value = (beatNumber % this.beatsPerBar == 0) ? 1000 : 800;
+        osc.frequency.value = (beatNumber % this.beatsPerBar == 0) ? this.leadNote : this.baseNote;
         envelope.gain.value = 1;
         envelope.gain.exponentialRampToValueAtTime(1, time + 0.001);
         envelope.gain.exponentialRampToValueAtTime(0.001, time + 0.02);
@@ -135,5 +137,16 @@ function display_bpm() {
         });
     
 }
+
+function frequency() {
+    $('.lead-note').on('change', () => {
+        M.leadNote = 200 + (450 * ($('.lead-note').val() - 1));
+    });
+    $('.base-note').on('change', () => {
+        M.baseNote = 200 + (450 * ($('.base-note').val() - 1));
+    });
+}
+
+frequency();
 
 display_bpm();
