@@ -149,6 +149,11 @@ function check_and_set_cookies(name) {
         console.log(cookiePair[0]);
         if(name == cookiePair[0]) {
             $(`.${name}-slider`).val(parseInt(cookiePair[1]));
+            if (name === 'lead') {
+                M.leadNote = cookiePair[1];
+            } else if (name === 'base') {
+                M.baseNote = cookiePair[1];
+            }
         }
     }
 }
