@@ -11403,12 +11403,14 @@ header.masthead .bg-circle-4 {
 .plus-button {
   content: url('../assets/img/plus.png');
   width: 30px;
+  cursor: pointer;
 }
 
 .minus-button {
   content: url('../assets/img/minus.png');
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 .minus-button:hover, .plus-button:hover {
   background-color: rgb(228, 228, 228);
@@ -11426,3 +11428,13 @@ header.masthead .bg-circle-4 {
   text-shadow: 2px 2px 4px #000000;
 }
 
+.lead-slider {
+  -webkit-appearance: slider-vertical;
+  height: 200px;
+  
+}
+
+.base-slider {
+  -webkit-appearance: slider-vertical;
+  height: 200px;
+}

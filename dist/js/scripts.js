@@ -18,8 +18,8 @@ class Metronome
         this.nextNoteTime = 0.0;     // when the next note is due
         this.isRunning = false;
         this.intervalID = null;
-        this.leadNote = 200;
-        this.baseNote = 200;
+        this.leadNote = 50;
+        this.baseNote = 50;
     }
 
     nextNote()
@@ -99,9 +99,10 @@ class Metronome
     }
 }
 
-let M = new Metronome($('input').val());
+let M = new Metronome($('.bpm-slider').val());
+
 function start_or_stop() {
-    M.tempo = $('input').val();
+    M.tempo = $('.bpm-slider').val();
     M.startStop();
     button = document.getElementsByClassName('button-start')[0];
     button.classList.toggle('button-stop');
@@ -113,26 +114,26 @@ function start_or_stop() {
 }
 
 function display_bpm() {
-    let bpm = $('input').val();
+    let bpm = $('.bpm-slider').val();
     $('.bpmd').html(bpm);
-    $('input').on('input', function() {
-        bpm = $('input').val();
+    $('.bpm-slider').on('input', function() {
+        bpm = $('.bpm-slider').val();
         $('.bpmd').html(bpm);
       });
-      $('input').on('change', function() {
-        bpm = $('input').val();
+      $('.bpm-slider').on('change', function() {
+        bpm = $('.bpm-slider').val();
         M.tempo = bpm;
         document.cookie = `bpm=${M.tempo}`;
       });
     $('.plus-button').on('click', function() {
-        $('input').val(parseInt(bpm) + 1);
-        bpm = $('input').val()
+        $('.bpm-slider').val(parseInt(bpm) + 1);
+        bpm = $('.bpm-slider').val()
         M.tempo = bpm;
         $('.bpmd').html(bpm);
         });
     $('.minus-button').on('click', function() {
-        $('input').val(parseInt(bpm) - 1);
-        bpm = $('input').val()
+        $('.bpm-slider').val(parseInt(bpm) - 1);
+        bpm = $('.bpm-slider').val()
         M.tempo = bpm;
         $('.bpmd').html(bpm);
         });
@@ -147,20 +148,31 @@ function check_and_set_cookies(name) {
         cookiePair[0] = cookiePair[0].split(' ').join("");
         console.log(cookiePair[0]);
         if(name == cookiePair[0]) {
-            $('input').val(parseInt(cookiePair[1]));
+            $(`.${name}-slider`).val(parseInt(cookiePair[1]));
         }
     }
 }
 
 function frequency() {
-    $('.lead-note').on('change', () => {
-        M.leadNote = 200 + (450 * ($('.lead-note').val() - 1));
+    $('.lead-slider').on('change', () => {
+        M.leadNote = $('.lead-slider').val();
+        document.cookie = `lead=${M.leadNote}`;
     });
-    $('.base-note').on('change', () => {
-        M.baseNote = 200 + (450 * ($('.base-note').val() - 1));
+    $('.base-slider').on('change', () => {
+        M.baseNote = $('.base-slider').val();
+        document.cookie = `base=${M.baseNote}`;
     });
 }
 
+function beatsPerBar() {
+    $('.beats-per-bar').on('input', () => {
+        M.beatsPerBar = $('.beats-per-bar').val();
+    })
+}
+
 check_and_set_cookies('bpm');
+check_and_set_cookies('lead');
+check_and_set_cookies('base');
 frequency();
+beatsPerBar();
 display_bpm();
